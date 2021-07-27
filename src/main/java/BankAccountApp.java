@@ -21,6 +21,7 @@ public class BankAccountApp {
 			return 1;
 		}
 		bal = bal + amt;
+		System.out.println("New Balance: " + bal);
 		return 0;
 	}
 
@@ -37,6 +38,7 @@ public class BankAccountApp {
 			return 1;
 		}
 		bal = bal - amt;
+		System.out.println("New Balance: " + bal);
 		return 0;
 	}
 
@@ -91,4 +93,3 @@ public class BankAccountApp {
 		} while (!quit);
 	}
 }
-
