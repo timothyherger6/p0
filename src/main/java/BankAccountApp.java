@@ -1,8 +1,21 @@
-import java.util.*;
-import java.lang.*;
+import com.opencsv.CSVWriter;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class BankAccountApp {
 	static Scanner input = new Scanner(System.in);
+	static CSVWriter writer;
+
+	static {
+		try {
+			writer = new CSVWriter(new FileWriter("C:\\Users\\Lorraine Herger\\OneDrive\\Documents\\GitHub\\project0\\p0\\src\\main\\java\\accInfo.csv"));
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+
 	String name, accType;
 	int accNo, bal, amt;
 
@@ -53,15 +66,25 @@ public class BankAccountApp {
 		System.out.println("Balance:" + bal);
 	}
 
-	public static void main(String args[]) {
+	public static void main(String args[]) throws IOException {
 		System.out.println("Enter your Name: ");
 		String nn = input.nextLine();
+		String[] nnStrArr = {nn};
+ 		writer.writeNext(nnStrArr);
 		System.out.println("Enter Account Number: ");
 		int num = input.nextInt();
+		String[] numStr = {Integer.toString(num)};
+		writer.writeNext(numStr);
 		System.out.println("Enter Account Type: ");
 		String type = input.next();
+		String[] typeStrArr = {type};
+		writer.writeNext(typeStrArr);
 		System.out.println("Enter Initial Balance: ");
 		int bal = input.nextInt();
+		String[] balStr = {Integer.toString(bal)};
+		writer.writeNext(balStr);
+		writer.flush();
+		System.out.println("Account Data entered into file \"accInfo.csv\"");
 		BankAccountApp b1 = new BankAccountApp(nn, num, type, bal);
 		int menu;
 		System.out.println("Menu");
