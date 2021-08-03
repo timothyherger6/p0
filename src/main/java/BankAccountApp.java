@@ -17,9 +17,10 @@ public class BankAccountApp {
 	}
 
 	String name, accType;
-	int accNo, bal, amt;
+	int accNo;
+	double bal, amt;
 
-	public BankAccountApp(String name, int accNo, String accType, int bal) {
+	public BankAccountApp(String name, int accNo, String accType, double bal) {
 		this.name = name;
 		this.accNo = accNo;
 		this.accType = accType;
@@ -28,7 +29,7 @@ public class BankAccountApp {
 
 	public int Deposit() {
 		System.out.print("Enter amount to deposit:");
-		amt = input.nextInt();
+		amt = input.nextDouble();
 		if (amt < 0) {
 			System.out.println("Invalid Amount");
 			return 1;
@@ -41,7 +42,7 @@ public class BankAccountApp {
 	public int Withdraw() {
 		System.out.println("Your Balance=" + bal);
 		System.out.print("Enter amount to withdraw:");
-		amt = input.nextInt();
+		amt = input.nextDouble();
 		if (bal < amt) {
 			System.out.println("Not sufficient balance.");
 			return 1;
@@ -73,15 +74,15 @@ public class BankAccountApp {
  		writer.writeNext(nnStrArr);
 		System.out.println("Enter Account Number: ");
 		int num = input.nextInt();
-		String[] numStr = {Integer.toString(num)};
+		String[] numStr = {Integer.toString((num))};
 		writer.writeNext(numStr);
 		System.out.println("Enter Account Type: ");
 		String type = input.next();
 		String[] typeStrArr = {type};
 		writer.writeNext(typeStrArr);
 		System.out.println("Enter Initial Balance: ");
-		int bal = input.nextInt();
-		String[] balStr = {Integer.toString(bal)};
+		double bal = input.nextDouble();
+		String[] balStr = {Double.toString((bal))};
 		writer.writeNext(balStr);
 		writer.flush();
 		System.out.println("Account Data entered into file \"accInfo.csv\"");

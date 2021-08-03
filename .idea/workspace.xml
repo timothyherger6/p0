@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="2c086029-b2c8-4f3b-89ac-ac03cdc1481e" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/test/java/BankAccountTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/BankAccountApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/BankAccountApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/accInfo.csv" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/accInfo.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/BankAccountApp.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/BankAccountApp.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -31,6 +40,9 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="XML" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/sandbox" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="terminal" />
   </component>
   <component name="RecentsManager">
