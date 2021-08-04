@@ -27,33 +27,59 @@ public class BankAccountApp {
 		this.bal = bal;
 	}
 
-	public int Deposit() {
+	public boolean Deposit(double v) {
+		if (v < 0) {
+			System.out.println("Invalid Amount");
+			return false;
+		}
+		bal = bal + v;
+		System.out.println("New Balance: " + bal);
+		return true;
+	}
+
+	public boolean Deposit() {
 		System.out.print("Enter amount to deposit:");
 		amt = input.nextDouble();
 		if (amt < 0) {
 			System.out.println("Invalid Amount");
-			return 1;
+			return false;
 		}
 		bal = bal + amt;
 		System.out.println("New Balance: " + bal);
-		return 0;
+		return true;
 	}
 
-	public int Withdraw() {
+	public boolean Withdraw(double v) {
+		System.out.println("Your Balance=" + bal);
+		System.out.print("Enter amount to withdraw:");
+		if (bal < v) {
+			System.out.println("Not sufficient balance.");
+			return false;
+		}
+		if (v < 0) {
+			System.out.println("Invalid Amount");
+			return false;
+		}
+		bal = bal - v;
+		System.out.println("New Balance: " + bal);
+		return true;
+	}
+
+	public boolean Withdraw() {
 		System.out.println("Your Balance=" + bal);
 		System.out.print("Enter amount to withdraw:");
 		amt = input.nextDouble();
 		if (bal < amt) {
 			System.out.println("Not sufficient balance.");
-			return 1;
+			return false;
 		}
 		if (amt < 0) {
 			System.out.println("Invalid Amount");
-			return 1;
+			return false;
 		}
 		bal = bal - amt;
 		System.out.println("New Balance: " + bal);
-		return 0;
+		return true;
 	}
 
 	public void Display() {
@@ -65,6 +91,10 @@ public class BankAccountApp {
 
 	public void DisplayBalance() {
 		System.out.println("Balance:" + bal);
+	}
+
+	public Double getBalance() {
+		return this.bal;
 	}
 
 	public static void main(String args[]) throws IOException {
